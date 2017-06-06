@@ -1,1 +1,1 @@
-include ':app', ':flexyrecycleradapter'
+include ':library'
