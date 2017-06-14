@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public abstract class BaseHolderModel {
+public abstract class FlexState {
 
     /**
      * @return Unique integer identifier for RecyclerAdapter getItemViewType overridden method. Avoid using
@@ -21,9 +21,9 @@ public abstract class BaseHolderModel {
     public abstract int getViewHolderResId();
 
     /**
-     * @return custom viewholder implementation which extends from BaseViewHolder
+     * @return custom viewholder implementation which extends from FlexHolder
      */
-    public abstract BaseViewHolder createViewHolder(ViewGroup parent);
+    public abstract FlexHolder createViewHolder(ViewGroup parent);
 
 
     /**

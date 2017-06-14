@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FlexyRecyclerAdapter.iml" filepath="$PROJECT_DIR$/FlexyRecyclerAdapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/flexysamples/flexysamples.iml" filepath="$PROJECT_DIR$/samples/flexysamples/flexysamples.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/samples.iml" filepath="$PROJECT_DIR$/samples/samples.iml" />
     </modules>
   </component>
 </project>

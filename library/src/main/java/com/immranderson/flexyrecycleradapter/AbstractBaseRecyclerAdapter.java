@@ -10,23 +10,23 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public abstract class AbstractBaseRecyclerAdapter extends RecyclerView.Adapter<BaseViewHolder> {
+public abstract class AbstractBaseRecyclerAdapter extends RecyclerView.Adapter<FlexHolder> {
 
-    private List<BaseHolderModel> pHolderDataList = new ArrayList<>();
-    private Map<String, BaseHolderModel> holderDataTags = new HashMap<>();
-    private Map<Integer, BaseHolderModel> holderDataRef = new HashMap<>();
+    private List<FlexState> pHolderDataList = new ArrayList<>();
+    private Map<String, FlexState> holderDataTags = new HashMap<>();
+    private Map<Integer, FlexState> holderDataRef = new HashMap<>();
 
 
-    public void addViewData(@NonNull BaseHolderModel holderData) {
+    public void addViewData(@NonNull FlexState holderData) {
 
         pHolderDataList.add(holderData);
         holderDataRef.put(holderData.getType(), holderData);
 
     }
 
-    public void addViewDataCollection(@NonNull Collection<? extends BaseHolderModel> holderData) {
+    public void addViewDataCollection(@NonNull Collection<? extends FlexState> holderData) {
 
-        for (BaseHolderModel vhd : holderData) {
+        for (FlexState vhd : holderData) {
 
             pHolderDataList.add(vhd);
             holderDataRef.put(vhd.getType(), vhd);
@@ -35,14 +35,14 @@ public abstract class AbstractBaseRecyclerAdapter extends RecyclerView.Adapter<B
 
     }
 
-    public void addViewDataAtPosition(@NonNull BaseHolderModel holderData, int position) {
+    public void addViewDataAtPosition(@NonNull FlexState holderData, int position) {
 
         pHolderDataList.add(position, holderData);
         holderDataRef.put(holderData.getType(), holderData);
 
     }
 
-    public List<BaseHolderModel> getViewDataList() {
+    public List<FlexState> getViewDataList() {
 
         return pHolderDataList;
 
@@ -56,7 +56,7 @@ public abstract class AbstractBaseRecyclerAdapter extends RecyclerView.Adapter<B
     }
 
     @Override
-    public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public FlexHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         return holderDataRef.get(viewType).createViewHolder(parent);
 
@@ -64,7 +64,7 @@ public abstract class AbstractBaseRecyclerAdapter extends RecyclerView.Adapter<B
 
     @Override
     @SuppressWarnings("unchecked")
-    public void onBindViewHolder(BaseViewHolder holder, int position) {
+    public void onBindViewHolder(FlexHolder holder, int position) {
 
         holder.bindData(pHolderDataList.get(position));
 

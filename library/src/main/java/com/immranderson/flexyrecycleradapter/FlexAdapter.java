@@ -5,6 +5,6 @@ package com.immranderson.flexyrecycleradapter;
  * you can just choose to extend from @AbstractBaseRecyclerAdapter, but in 99% of cases this concrete implementation
  * will work just fine.
  */
-public class BaseRecyclerAdapter extends AbstractBaseRecyclerAdapter {
+public class FlexAdapter extends AbstractBaseRecyclerAdapter {
 
 }
